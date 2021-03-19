@@ -63,5 +63,9 @@ document.addEventListener('DOMContentLoaded', function() {
     'https://api.openweathermap.org/data/2.5/weather?q=los+angeles&APPID=' +
     apiKey;
   // get(url, successHandler, failHandler);
-  console.log(get(url));
+  // console.log(get(url));
+  get(url)
+    .then(function(response) {
+      successHandler(response);
+    });
 });
